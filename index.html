@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            padding-top: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding-bottom: 2px;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+            color: rgb(34, 7, 241);
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 5px;
+        }
+        footer {
+            flex: 1 0 auto;
+            background-color:#000000;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 10px;
+        }
+        #About{
+            align-items: center;
+            justify-content: center;
+            font-size: 2cap;
+        }
+        #About img{
+            margin-top: -15px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .content, .image {
+            flex: 1;
+            aspect-ratio: 3/2;
+            object-fit: contain;
+        }
+        .content {
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-right: 5cap;
+        }
+        
+        .contact-form-container,
+        .map-container {
+            flex: 1 1 45%;
+            border-radius: 20px;
+            box-sizing: border-box;
+            justify-content: space-between;
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-form {
+            width: 100%;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        
+        .contact-form .error {
+            color: red;
+            font-size: 14px;
+        }
+        
+        h2{
+            text-align: center;
+            font-size: 3cap;
+            margin-bottom: 3cap;
+        }
+        h3{
+            font-size: 2cap;
+        }
+    </style>
+    <title>Health and Wellness</title>
+</head>
+<body>
+    <script>
+        window.watsonAssistantChatOptions = {
+  integrationID: "5dd36f24-9cae-4ef2-a2d1-29dd5b31e5af", // The ID of this integration.
+  region: "au-syd", // The region your integration is hosted in.
+  serviceInstanceID: "f5f4eca0-b655-4e2c-8725-798b5aba2a83", // The ID of your service instance.
+  onLoad: async (instance) => { await instance.render(); }
+};
+setTimeout(function(){
+  const t=document.createElement('script');
+  t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+  document.head.appendChild(t);
+});
+
+  </script>
+
+<nav>
+    <ul>
+        <li><a href="#About">About</a></li>
+        <li><a href="#health-tips">Health Tips</a></li>
+        <li><a href="#wellness-activities">Wellness Activities</a></li>
+        <li><a href="#wellness-events">Wellness Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>Employee Wellness Program</h1>
+</header>
+
+<section id="About">
+    <h2>About</h2>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.oneclearmessage.com%2Fwp-content%2Fuploads%2F2017%2F05%2Femployee-wellness-768x320.png&f=1&nofb=1&ipt=f0d9525e0c0bdd9976b2e5e10dc3cb67b5e4b6dd23a8281ac64174eb1395b502&ipo=images" alt="img">
+    <p>At our Employee Wellness Program, we are dedicated to supporting your well-being journey by offering a comprehensive range of services aimed at promoting a healthier lifestyle and fostering a positive work environment. From providing insightful health tips to tracking your wellness activities and organizing engaging events, we strive to empower you with the resources and support needed to achieve your health goals. With a focus on holistic wellness, we aim to inspire and motivate our employees to prioritize self-care, mental health, and work-life balance. Join us on this rewarding journey towards improved health and vitality</p>
+</section>
+
+    <div id="health-tips" class="container">
+        <h2>Health Tips</h2>
+        <div class="section">
+            <div class="content">
+                <h3>1. Nutrition and Healthy Eating</h3>
+                <p><b>Healthy Cafeteria Options:</b> Offer nutritious meals and snacks in the workplace cafeteria.</p>
+                <p><b>Nutrition Workshops:</b> Provide sessions on balanced diets, meal planning, and healthy cooking.</p>
+                <p><b>Hydration Stations:</b> Ensure access to water coolers or hydration stations throughout the workplace</p>
+            </div>
+            <div class="image">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.captel.com%2Fwp-content%2Fuploads%2F2020%2F03%2Fnutrition-healthy-eating-tips-for-seniors.jpg&f=1&nofb=1&ipt=69bc74d74add79baef74b0a9ea04782877124245af21485f2e4f96e4f3881aa6&ipo=images" alt="Healthy food img">
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                <h3>2. Mental Health and Well-being</h3>
+                <p><b>Stress Management Workshops:</b> Offer training on mindfulness, meditation, and stress reduction techniques.Provide employees with practical tools to manage stress effectively in both personal and professional settings.</p>
+                <p><b>Counseling Services:</b> Provide access to professional counseling and mental health support.Offer confidential counseling sessions with trained therapists to help employees navigate challenges such as anxiety, depression, or work-related stress.</p>
+                <p><b>Relaxation Spaces:</b> Create quiet areas for relaxation and mental recharge.Designate specific spaces within the workplace where employees can take short breaks to unwind, meditate, or practice mindfulness. Ensure these areas are equipped with comfortable seating, soothing lighting, and calming decor to promote relaxation and stress relief.</p>
+            </div>
+            <div class="image">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.jJqN1ENpUSBiIv8mNvKKqAHaJ4%26pid%3DApi&f=1&ipt=bdeb67a387e7dbe8a9a95e4019a1a0749901b7206bd9cac7f619124e3be036bf&ipo=images" alt="Mental health img">
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                <h3>3. Educational Resources and Training</h3>
+                <p><b>Wellness Seminars:</b> Host educational sessions on various health topics like sleep hygiene, smoking cessation, and chronic disease management.</p>
+                <p><b>Health Newsletters:</b> Distribute regular newsletters with tips, recipes, and wellness updates.</p>
+                <p><b>Online Resources:</b> Provide access to a wellness portal with articles, videos, and interactive tools.</p>
+            </div>
+            <div class="image">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftheeducationhub.org.nz%2Fwp-content%2Fuploads%2F2021%2F03%2F2.-Practices-of-effective-professional-learning-communities-scaled.jpg&f=1&nofb=1&ipt=24c533311d73648a21c3d976abd26045341b4b87302660702197258565b85e33&ipo=images" alt="Training img">
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                <h3>4. Supportive Environment</h3>
+                <p><b>Ergonomic Workstations:</b> Ensure workstations are ergonomically designed to prevent injury and enhance comfort.</p>
+                <p><b>Tobacco-Free Policies:</b> Implement and enforce a smoke-free workplace policy.</p>
+                <p><b>Healthy Vending Machines:</b> Stock vending machines with healthy snack options.</p>
+            </div>
+            <div class="image">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.teamly.com%2Fblog%2Fwp-content%2Fuploads%2F2021%2F11%2FSupportive-Company-Culture.png&f=1&nofb=1&ipt=35280331f7afa2837d968e4bf052c5e11720a509ab5becae36162f7ccaf2588a&ipo=images" alt="Supportive Environment img">
+            </div>
+        </div>
+    </div>
+
+    <div id="wellness-activities" class="container">
+        <h2>Wellness Activities</h2>
+        <div class="section">
+            <div class="content">
+                <h3>1. Physical Fitness</h3>
+                <p><b>On-site Fitness Facilities:</b> Provide a gym or exercise room with equipment and fitness classes.</p>
+                <p><b>Group Exercise Programs:</b> Organize group activities like yoga, pilates, or running clubs.</p>
+                <p><b>Active Breaks:</b> Encourage short, frequent breaks for stretching or light exercise.</p>
+            </div>
+            <div class="image">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkey.com%2Fpng%2Ffull%2F808-8089823_fitness-clipart-group-fitness-workout-group-transparent.png&f=1&nofb=1&ipt=cc74438310ee492295463873a918637506996ed04f7a67b4a194f31996ff022d&ipo=images" alt="Physical fitness img">
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                <h3>2. Work-Life Balance</h3>
+                <p><b>Flexible Work Hours:</b> Allow flexible scheduling and remote work options.</p>
+                <p><b>Family Support Programs:</b> Provide resources for child care, elder care, and family counseling.</p>
+                <p><b>Paid Time Off:</b> Encourage the use of vacation days and personal time to avoid burnout.</p>
+            </div>
+            <div class="image">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmarkecreativemerchandise.com%2Fwp-content%2Fuploads%2F2021%2F05%2Fmarke-healthy-work-life-balance.jpg&f=1&nofb=1&ipt=53b4ecc3defe2a6c6283520203c86068224e595eb31fcf6c09c17c8c602c28e2&ipo=images" alt="Work-Life Balancing img">
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                <h3>3. Health Screenings and Preventive Care</h3>
+                <p><b>Regular Health Check-ups:</b> Organize on-site health screenings for blood pressure, cholesterol, and glucose levels.</p>
+                <p><b>Vaccination Clinics:</b> Provide flu shots and other vaccinations.</p>
+                <p><b>Health Risk Assessments:</b> Offer assessments to help employees understand and manage health risks.</p>
+            </div>
+            <div class="image">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmanlyzine.com%2Fwp-content%2Fuploads%2F2024%2F01%2FHealth-Screenings-manlyzine.png&f=1&nofb=1&ipt=34f3d50404dadebfe13030a228bc0190f78165599cf4c39ebd871be0e9e9e43f&ipo=images" alt="Health Care img">
+            </div>
+        </div>
+    </div>
+    <div id="wellness-events" class="container">
+        <h2>Wellness Events</h2>
+        <div class="section">
+            <div class="content">
+                <h3>1.Incentive Programs</h3>
+                <p><b>Wellness Challenges:</b> Organize competitions and challenges with rewards for achieving health goals</p>
+                <p><b>Recognition Programs:</b> Acknowledge and reward employees who actively participate in wellness activities</p>
+                <p><b>Health Incentives:</b> Offer discounts on health insurance premiums for participation in wellness programs.</p>
+            </div>
+            <div class="image">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fyumuuv.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmax_650x650%2Fpublic%2F2022-12%2FBlog%2520Cover%2520-%2520Wellness%2520Incentives_0.png%3Fitok%3DDwwEUlkM&f=1&nofb=1&ipt=7330c02351a941b0570001c34cbc77d52577cc9a035d2b8573cf434313ce17f1&ipo=images" alt="Incentive Programs">
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                <h3>2.Community Building Activities</h3>
+                <p>Health Fairs: Host annual or semi-annual health fairs with booths from local health providers, fitness demonstrations, and free health screenings.</p>
+                <p>Employee Retreats: Plan wellness retreats or team-building events focused on relaxation and health.</p>
+                <p>Social Events: Organize social gatherings such as healthy potlucks, walking meetings, or charity runs to promote a sense of community.</p>
+            </div>
+            <div class="image">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.betteryou.ai%2Fwp-content%2Fuploads%2F2023%2F11%2Fimage-2.png&f=1&nofb=1&ipt=7a4e6a099ffdd1ae113ce49bbd1a59a4e49d7f9217214a54edc2f82ec4765506&ipo=images" alt="Community Building Activities images">
+            </div>
+        </div>
+        <div id="contact" class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-form-container">
+                    <form class="contact-form" action="#" method="POST">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                  
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                  
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone">
+                  
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                  
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+<!-- Embedded Google Maps -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31317.253394000534!2d79.07419949999999!3d11.138927099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baadf64aacdec61%3A0x7b67cecaf20a3c78!2sAriyalur%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1716299688013!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 Employee Wellness Program. All rights reserved.</p>
+        </footer>
+    </div>
+    <script href="/employee_wellness.js" ></script>
+</body>
+</html>
